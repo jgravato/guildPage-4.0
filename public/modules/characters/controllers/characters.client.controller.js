@@ -34,8 +34,8 @@ angular.module('characters').controller('CharactersController', ['$http', '$scop
                         7 : 'Gnome',
                         8 : 'Troll',
                         9 : 'Goblin',
-                        10 : 'Worgen',
-                        11 : 'Blood Elf',
+                        10 : 'Blood Elf',
+                        11 : 'Draeni',
                         22 : 'Worgen',
                         25 : 'Pandaren'
                     };
@@ -109,7 +109,7 @@ angular.module('characters').controller('CharactersController', ['$http', '$scop
                 });  
             })
             .error(function(data,status,headers,config) {
-                $scope.error  = 'Bad Request.  Check character and realm names.';
+                $scope.error  = 'Bad Request.  Check character and realm names.  Make sure you are using the realm the character was created in, not necessarily hosted in.';
                 $scope.name = '';
                 $scope.realm = '';
                 character.$remove();
