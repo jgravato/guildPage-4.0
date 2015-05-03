@@ -75,7 +75,7 @@ exports.delete = function(req, res) {
  * List of Characters
  */
 exports.list = function(req, res) { 
-	Character.find().sort('-created').populate('user', 'displayName').exec(function(err, characters) {
+	Character.find({ user: req.user }).sort('-created').populate('user', 'displayName').exec(function(err, characters) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)

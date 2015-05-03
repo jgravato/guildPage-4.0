@@ -23,7 +23,55 @@ var CharacterSchema = new Schema({
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
-	}
+	},
+    realm: {
+        type: String,
+        default: ''
+    },
+    race: {
+        type: String,
+        default: ''
+    },
+    class: {
+        type: String,
+        default: ''
+    },
+    achievements: {
+        type: Number,
+        default: '0'
+    },
+    level: {
+        type: Number,
+        default: '0'
+    },
+    thumbnail: {
+        type: String,
+        default: ''
+    },
+    guildName: {
+        type: String,
+        default: ''
+    },
+    guildMembers: {
+        type: Number,
+        default: null
+    },
+    guildRealm: {
+        type: String,
+        default: ''
+    },
+    lastUpdated: {
+        type: Date,
+        default: ''
+    },
+    guild: {
+        type: Schema.ObjectId,
+        ref: 'Guild'
+    },
+    guildPageRank: {
+        type: Number,
+        default: null
+    }
 });
 
 mongoose.model('Character', CharacterSchema);
