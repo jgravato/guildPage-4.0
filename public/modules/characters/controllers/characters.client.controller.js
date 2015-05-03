@@ -19,7 +19,8 @@ angular.module('characters').controller('CharactersController', ['$http', '$scop
             
             //api call
             $http.jsonp('https://us.api.battle.net/wow/character/'+character.realm+'/'+character.name+'?fields=guild&locale=en_US&jsonp=JSON_CALLBACK&apikey=77qnvbc7kem6n7ukch6yb89ygh5ds7se')
-            .success(function(data) {               
+            .success(function(data) {        
+                console.log(data);
                 ///////////////////////////functions
                 //calculate race to save into string
                 function calcRace(race) {
@@ -29,13 +30,14 @@ angular.module('characters').controller('CharactersController', ['$http', '$scop
                         3 : 'Dwarf',
                         4 : 'Night Elf',
                         5 : 'Undead',
-                        6 : 'Blood Elf',
+                        6 : 'Tauren',
                         7 : 'Gnome',
                         8 : 'Troll',
                         9 : 'Goblin',
-                        10 : 'Draeni',
-                        11 : 'Worgen',
-                        12 : 'Pandaren'
+                        10 : 'Worgen',
+                        11 : 'Blood Elf',
+                        22 : 'Worgen',
+                        25 : 'Pandaren'
                     };
                 character.race = possibleRaces[race];
                 }
@@ -100,7 +102,7 @@ angular.module('characters').controller('CharactersController', ['$http', '$scop
                    // Clear form fields
                     $scope.name = '';
                     $scope.realm = '';     
-                    
+                    console.log(response);
                     
                 }, function(errorResponse) {
                     $scope.error = errorResponse.data.message;
