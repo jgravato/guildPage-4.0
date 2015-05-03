@@ -5,6 +5,7 @@
  */
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors.server.controller'),
+    User = mongoose.model('User'),
 	Character = mongoose.model('Character'),
 	_ = require('lodash');
 
@@ -27,6 +28,20 @@ exports.create = function(req, res) {
 		}
 	});
 };
+
+
+
+//select character
+exports.select = function(req, res) {
+    var character = req.character;
+    
+    console.log('hey hoe');
+    res.jsonp(req.character);
+    
+    
+};
+
+
 
 /**
  * Show the current Character

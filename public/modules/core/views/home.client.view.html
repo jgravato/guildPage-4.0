@@ -1,4 +1,4 @@
-<section data-ng-controller="HomeController">
+<section data-ng-controller="CharactersController">
     
     <div id="masthead">  
   <div class="container">
@@ -14,9 +14,9 @@
                 <div class="col-sm-6">
         	      	<img src="http://placehold.it/180x100" class="img-responsive">
                 </div>
-                <div class="col-sm-6">
+                <div data-ng-bind="characters" class="col-sm-6">
 	              	<ul>
-                    <li>Character Name</li>
+                    <li>{{ character.name }} </li>
                     <li>Race</li>
                     <li>Rank</li>
                     <li>Switch Character</li> 

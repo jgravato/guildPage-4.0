@@ -48,18 +48,6 @@ var CharacterSchema = new Schema({
         type: String,
         default: ''
     },
-    guildName: {
-        type: String,
-        default: ''
-    },
-    guildMembers: {
-        type: Number,
-        default: null
-    },
-    guildRealm: {
-        type: String,
-        default: ''
-    },
     lastUpdated: {
         type: Date,
         default: ''

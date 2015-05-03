@@ -13,6 +13,10 @@ module.exports = function(app) {
 		.get(characters.read)
 		.put(users.requiresLogin, characters.hasAuthorization, characters.update)
 		.delete(users.requiresLogin, characters.hasAuthorization, characters.delete);
+    
+    app.route('/characters/select/:characterId')
+		.put(users.requiresLogin, characters.hasAuthorization, characters.select)
+    
 
 	// Finish by binding the Character middleware
 	app.param('characterId', characters.characterByID);
