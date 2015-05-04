@@ -114,10 +114,10 @@
 
          
           <form action="">
-              <input style="margin: 10px; padding: 10px;" type="text" value="Search Roster" />
+              <label>Search: <input ng-model="searchText.character.name"></label>
           </form>
           
-          <div data-ng-repeat="member in guild[0].members" class="list-group-item">
+          <div data-ng-repeat="member in guild[0].members | filter:searchText" class="list-group-item">
                 {{ member.character.name }}
             </div>
 

@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'guildpage';
-	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies', 'angular-loading-bar', 'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.bootstrap', 'ui.utils', 'btford.socket-io'];
+	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies', 'angular-loading-bar', 'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.bootstrap', 'ui.utils', 'btford.socket-io', 'infinite-scroll'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
