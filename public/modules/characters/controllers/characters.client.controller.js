@@ -71,22 +71,20 @@ angular.module('characters').controller('CharactersController', ['$http', '$scop
                     calcRace(data.race);
 
                     //setup the new guild
-                    var guild = new Guilds({
-                        name: data.guild.name,
-                        realm: data.guild.realm
-                    });
-
-
-
                     //fetch guild data
-                    $http.jsonp('https://us.api.battle.net/wow/guild/' + guild.realm + '/' + guild.name + '?fields=members&locale=en_US&jsonp=JSON_CALLBACK&apikey=77qnvbc7kem6n7ukch6yb89ygh5ds7se')
+                    $http.jsonp('https://us.api.battle.net/wow/guild/' + data.guild.realm + '/' + data.guild.name + '?fields=members&locale=en_US&jsonp=JSON_CALLBACK&apikey=77qnvbc7kem6n7ukch6yb89ygh5ds7se')
                         .success(function (guildData) {
-                            guild.level = guildData.level;
-                            guild.achievements = guildData.achievementPoints;
-                            guild.emblem = guildData.emblem;
-                            guild.members = guildData.members;
-                            guild.membersNum = guildData.members.length;
-                            guild.$save(character);
+                            var guild = new Guilds({
+                                randomfield: 'yourmom',
+                                name: data.guild.name,
+                                realm: data.guild.realm,
+                                level: guildData.level,
+                                achievements: guildData.achievementPoints,
+                                emblem : guildData.emblem,
+                                members : guildData.members,
+                                membersNum : guildData.members.length,
+                            });
+                            guild.$save();
                         });
 
                     // Redirect after save
