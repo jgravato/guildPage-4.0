@@ -55,57 +55,31 @@
       
       <!--right-->
       <div class="col-md-6">
-        <div style="padding: 10px 0 20px 0;">
-          <textarea name="fname" style="width: 100%; height: 100px;resize:none">
-            Let's add drag and drop if we can!
-          </textarea>
-          <a href="#" style="float: right;">Post</a>
-        </div>
-        <div style="padding: 20px 0;" class="feed">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta condimentum est. Sed at bibendum massa, eu hendrerit dui.</p>
-          <ul>
-            <li><a href="#">Like</a></li>
-            <li><a href="#">Comment</a></li>
-          </ul>
-        </div>
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="name">Message</label>
+                    <div class="controls">
+                        <input type="textarea" data-ng-model="message" id="message" class="form-control" placeholder="Message" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
         
-        
-        <hr>
-        <div class="feed">
+                <div style="padding: 20px 0;" class="feed">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta condimentum est. Sed at bibendum massa, eu hendrerit dui.</p>
           <ul>
             <li><a href="#">Like</a></li>
             <li><a href="#">Comment</a></li>
           </ul>
         </div>
-        <hr>
-        <div class="feed">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta condimentum est. Sed at bibendum massa, eu hendrerit dui.</p>
-          <ul>
-            <li><a href="#">Like</a></li>
-            <li><a href="#">Comment</a></li>
-          </ul>
-        </div>
-        <hr>
-        <div class="feed">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta condimentum est. Sed at bibendum massa, eu hendrerit dui.</p>
-          <ul>
-            <li><a href="#">Like</a></li>
-            <li><a href="#">Comment</a></li>
-          </ul>
-        </div>
-        <hr>
-        <div class="feed">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta condimentum est. Sed at bibendum massa, eu hendrerit dui.</p>
-          <ul>
-            <li><a href="#">Like</a></li>
-            <li><a href="#">Comment</a></li>
-          </ul>
-        </div>
-        
-        <hr>
-        <h4><a href="http://www.bootply.com/Gygh9swISB">Edit on Bootply</a></h4>
-        <hr>
+
 
         </div><!--/right-->
         
@@ -119,8 +93,8 @@
           
 
           <div data-ng-repeat="member in guild[0].members | filter:searchText" class="list-group-item">
-                             <p>Name: {{ member.character.name }}</p>
-              <p>Level: {{ member.character.level }}</p>
+            <p>Name: {{ member.character.name }}</p>
+            <p>Level: {{ member.character.level }}</p>
           </div>
 
 
