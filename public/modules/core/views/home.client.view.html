@@ -117,15 +117,11 @@
               <label>Search: <input ng-model="searchText.character.name"></label>
           </form>
           
-<<<<<<< HEAD
+
           <div data-ng-repeat="member in guild[0].members | filter:searchText" class="list-group-item">
-                {{ member.character.name }}
-=======
-          <div data-ng-repeat="member in guild[0].members" class="list-group-item">
-              <p>Name: {{ member.character.name }}</p>
+                             <p>Name: {{ member.character.name }}</p>
               <p>Level: {{ member.character.level }}</p>
->>>>>>> origin/master
-            </div>
+          </div>
 
 
       </div><!--/left-->
