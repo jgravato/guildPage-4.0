@@ -15,8 +15,8 @@ module.exports = function(app) {
 		.delete(users.requiresLogin, characters.hasAuthorization, characters.delete);
     
     app.route('/characters/select/:characterId')
-		.put(users.requiresLogin, characters.hasAuthorization, characters.select)
-    
+        .get(characters.list)
+		.put(users.requiresLogin, characters.hasAuthorization, characters.select);
 
 	// Finish by binding the Character middleware
 	app.param('characterId', characters.characterByID);

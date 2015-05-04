@@ -95,12 +95,9 @@ angular.module('characters').controller('CharactersController', ['$http', '$scop
                         // Clear form fields
                         $scope.name = '';
                         $scope.realm = '';
-                        console.log(response);
-                        if ($scope.authentication.user.selectedCharacter) {
-                            $scope.authentication.user.character.push = character;
-                        } else {
-                            $scope.authentication.user.selectedCharacter = character;
-                        }
+
+                        $scope.authentication.user.selectedCharacter.push(response);
+
                     }, function (errorResponse) {
                         $scope.error = errorResponse.data.message;
                     });

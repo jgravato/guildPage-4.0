@@ -93,10 +93,10 @@ var UserSchema = new Schema({
         type: Schema.ObjectId,
         ref: 'Character'
     }],
-    selectedCharacter: {
+    selectedCharacter: [{
         type: Object,
         default: null
-    }
+    }]
 });
 
 /**

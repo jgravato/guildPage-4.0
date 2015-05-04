@@ -8,6 +8,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
         
         $scope.characters = Characters.query();
         
+        console.log($scope);
         
         
 	}
