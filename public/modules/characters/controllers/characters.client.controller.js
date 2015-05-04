@@ -68,14 +68,14 @@ angular.module('characters').controller('CharactersController', ['$http', '$scop
                     character.level = data.level;
                     createThumb(data.thumbnail);
                     calcClass(data.class);
-                    calcRace(data.race);
+                    calcRace(data.race); 
+                    character.guild = data.guild.name;
 
                     //setup the new guild
                     //fetch guild data
                     $http.jsonp('https://us.api.battle.net/wow/guild/' + data.guild.realm + '/' + data.guild.name + '?fields=members&locale=en_US&jsonp=JSON_CALLBACK&apikey=77qnvbc7kem6n7ukch6yb89ygh5ds7se')
                         .success(function (guildData) {
                             var guild = new Guilds({
-                                randomfield: 'yourmom',
                                 name: data.guild.name,
                                 realm: data.guild.realm,
                                 level: guildData.level,
@@ -140,11 +140,12 @@ angular.module('characters').controller('CharactersController', ['$http', '$scop
         $scope.find = function () {
             if ($scope.authentication.user) {
                 $scope.characters = Characters.query();
-
+                
                 Guilds.query().$promise.then(function (res) {
                     $scope.guilds = res;
-                    //    console.log($scope.characters.name);
                 });
+                
+                console.log($scope);
             }
         };
 

@@ -53,8 +53,8 @@ var CharacterSchema = new Schema({
         default: ''
     },
     guild: {
-        type: Schema.ObjectId,
-        ref: 'Guild'
+        type: String,
+        default: null
     },
     guildPageRank: {
         type: Number,
