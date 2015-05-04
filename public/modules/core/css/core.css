@@ -13,3 +13,10 @@
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
 }
+
+/*--- post ---*/
+
+.post_header { padding: 10px 0 20px 0; }
+.post_body { padding: 20px 0; }
+.post_reply { list-style: none; float: right; }
+.post_reply li { display: block; float: left; padding: 0 10px; }
