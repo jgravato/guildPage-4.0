@@ -18,5 +18,9 @@ angular.module('core').controller('HeaderController', ['$scope', '$rootScope', '
             $rootScope.myCharValue = true;
 //            console.log($rootScope);
         });
+       Socket.on('guild.created', function (guild) {
+            $rootScope.myGuildValue = true;
+//            console.log($rootScope);
+        });
  }
 ]);
