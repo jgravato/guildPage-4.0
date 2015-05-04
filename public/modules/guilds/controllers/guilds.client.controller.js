@@ -11,6 +11,10 @@ angular.module('guilds').controller('GuildsController', ['$scope', '$stateParams
 			var guild = new Guilds ({
 				name: this.name
 			});
+            
+            //trying to see if member exists-----
+            console.log('#######------ First character name = ' + member.character[0].name);
+            //--------------------------------------
 
 			// Redirect after save
 			guild.$save(function(response) {
