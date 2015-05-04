@@ -22,5 +22,13 @@ angular.module('core').controller('HeaderController', ['$scope', '$rootScope', '
             $rootScope.myGuildValue = true;
 //            console.log($rootScope);
         });
+      Socket.on('character.deleted', function (character) {
+            $rootScope.characterDeletedValue = true;
+//            console.log($rootScope);
+        });
+     Socket.on('guild.deleted', function (guild) {
+            $rootScope.guildDeletedValue = true;
+//            console.log($rootScope);
+        });
  }
 ]);

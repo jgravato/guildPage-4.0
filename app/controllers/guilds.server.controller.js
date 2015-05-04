@@ -66,6 +66,8 @@ exports.delete = function(req, res) {
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
+             var socketio = req.app.get('socketio'); // makes a socket instance
+            socketio.emit('guild.deleted', guild); // sends the socket event to all current users
 			res.jsonp(guild);
 		}
 	});
