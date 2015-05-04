@@ -20,3 +20,7 @@
 .post_body { padding: 20px 0; }
 .post_reply { list-style: none; float: right; }
 .post_reply li { display: block; float: left; padding: 0 10px; }
+
+body {
+    background-image:url("http://i.imgur.com/DIo2984.png");
+}
