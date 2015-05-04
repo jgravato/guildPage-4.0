@@ -3,6 +3,11 @@
 /**
  * Module dependencies.
  */
+var mongoose = require('mongoose'),
+	errorHandler = require('./errors.server.controller'),
+	Article = mongoose.model('Article'),
+	_ = require('lodash');
+
 exports.index = function(req, res) {
 	res.render('index', {
 		user: req.user || null,
@@ -12,6 +17,7 @@ exports.index = function(req, res) {
 
 exports.create = function(req, res) {
 	var article = new Article(req.body);
+    
 	article.user = req.user;
 
 	article.save(function(err) {

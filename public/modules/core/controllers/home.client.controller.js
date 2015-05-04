@@ -17,6 +17,8 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
         console.log($scope);
      
      $scope.create = function () {
-         console.log('hey');
-     }
+         
+         
+     };
+     
  }]);

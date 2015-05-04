@@ -1,7 +1,77 @@
+<link rel="stylesheet" type="text/css" src="../core/core.css"/>
 <section data-ng-controller="CharactersController" data-ng-init="findOne()">
 	<div class="page-header">
+	    <img src="http://placehold.it/75x75/"/>
 		<h1 data-ng-bind="character.name"></h1>
 	</div>
+        <div id="main_container_characters">
+            <div id="container_toons">
+                <div id="item_break">
+                    <div id="item">Head</div>		    
+                    <div id="item">Neck</div>
+                    <div id="item">Shoulders</div>
+                </div>
+                <div id="item_break">
+                    <div id="item">Back</div>
+                    <div id="item">Chest</div>
+                    <div id="item">Shirt</div>
+                </div>
+                <div id="item_break">
+                    <div id="item">Tabard</div>
+                    <div id="item">Bracers</div>
+                    <div id="item">Gloves</div>
+                </div>
+                <div id="item_break">
+                    <div id="item">Belt</div>
+                    <div id="item">Pants</div>
+                    <div id="item">Boots</div>
+                </div>
+                <div id="item_break">
+                    <div id="item">Ring 1</div>
+                    <div id="item">Ring 2</div>
+                    <div id="item">Trinket 1</div>
+                </div>
+                <div id="item_break">
+                    <div id="item">Trinket 2</div>
+                    <div id="item">Main Hand</div>
+                    <div id="item">Offhand</div>
+                </div>
+            </div>
+            <div id="toon_break"></div>
+            <div id="container_toons">
+                <div id="stat1">
+                    <div id="atts">Attributes</div>
+                    <div id="atts">Strength</div>
+                    <div id="atts">Agility</div>
+                    <div id="atts">Intelect</div>
+                    <div id="atts">Stamina</div>
+                    <div id="atts">Attack</div>
+                    <div id="atts">Damage</div>
+                    <div id="atts">Attack Power</div>
+                    <div id="atts">Speed</div>
+                    <div id="atts">Spell</div>
+                    <div id="atts">Spellpower</div>
+                    <div id="atts">Mana Regen</div>
+                </div>
+                <div id="stat2">
+                    <div id="atts">Defense</div>
+                    <div id="atts">Armor</div>
+                    <div id="atts">Dodge</div>
+                    <div id="atts">Parry</div>
+                    <div id="atts">Block</div>
+                    <div id="atts">Enhancements</div>
+                    <div id="atts">Crit</div>
+                    <div id="atts">Haste</div>
+                    <div id="atts">Mastery</div>
+                    <div id="atts">Spirit</div>
+                    <div id="atts">Bonus Armor</div>
+                    <div id="atts">Multistrike</div>
+                    <div id="atts">Leech</div>
+                    <div id="atts">Versatility</div>
+                    <div id="atts">Avoidance</div>
+                </div>
+            </div>
+    <br/>
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == character.user._id))">
 		<a class="btn btn-primary" href="/#!/characters/{{character._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
@@ -19,3 +89,4 @@
 		</em>
 	</small>
 </section>
+        </div>

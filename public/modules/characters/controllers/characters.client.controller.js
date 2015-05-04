@@ -18,7 +18,7 @@ angular.module('characters').controller('CharactersController', ['$http', '$scop
             //api call
             $http.jsonp('https://us.api.battle.net/wow/character/' + character.realm + '/' + character.name + '?fields=fields=stats%2Citems%2Cguild&locale=en_US&jsonp=JSON_CALLBACK&apikey=77qnvbc7kem6n7ukch6yb89ygh5ds7se')
                 .success(function (data) {
-                    //                console.log(data);
+                    console.log(data);
                     ///////////////////////////functions
                     //calculate race to save into string
                     function calcRace(race) {

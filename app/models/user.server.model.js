@@ -91,7 +91,8 @@ var UserSchema = new Schema({
 	},
     characters: [{
         type: Schema.ObjectId,
-        ref: 'Character'
+        ref: 'Character',
+        default: null
     }]
 });
 

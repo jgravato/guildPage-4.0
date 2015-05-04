@@ -59,6 +59,10 @@ var CharacterSchema = new Schema({
     guildPageRank: {
         type: Number,
         default: null
+    },
+    items : {
+        type: Object,
+        default: null
     }
 });
 

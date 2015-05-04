@@ -14,8 +14,11 @@ var mongoose = require('mongoose'),
  */
 exports.create = function(req, res) {
 	var character = new Character(req.body);
+    
 	character.user = req.user;
+    
 
+    
 	character.save(function(err) {
 		if (err) {
 			return res.status(400).send({
@@ -73,6 +76,7 @@ exports.update = function(req, res) {
  * Delete an Character
  */
 exports.delete = function(req, res) {
+    
 	var character = req.character ;
 
 	character.remove(function(err) {
@@ -92,6 +96,7 @@ exports.delete = function(req, res) {
  * List of Characters
  */
 exports.list = function(req, res) { 
+        console.log(req.user);
 	Character.find({ user: req.user }).sort('-created').populate('user', 'displayName').exec(function(err, characters) {
 		if (err) {
 			return res.status(400).send({

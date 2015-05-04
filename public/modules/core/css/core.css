@@ -1,3 +1,6 @@
+body{
+    background-image:url("http://i.imgur.com/DIo2984.png");
+}
 .content {
 	margin-top: 50px;
 }
@@ -14,13 +17,55 @@
 	border-color: #78FA89;
 }
 
-/*--- post ---*/
 
-.post_header { padding: 10px 0 20px 0; }
-.post_body { padding: 20px 0; }
-.post_reply { list-style: none; float: right; }
-.post_reply li { display: block; float: left; padding: 0 10px; }
 
-body {
-    background-image:url("http://i.imgur.com/DIo2984.png");
+/*for the character views page*/
+#main_container_characters{
+    width: 650px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#container_toons{
+    width: 624px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+}
+#item_break{
+    width: 100px;
+    height: 312px;
+    float: left;
+}
+#item{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+#stat1{
+    width: 300px;
+    float: left;
+}
+#stat2{
+    width: 300px;
+    float: left;
+}
+#atts{
+    width: 300px;
+    height: 25px;
+    float: left;
+}
+#toon_break{
+    width: 624px;
+    height: 5px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: gold;
+    border-radius: 25px;
 }
