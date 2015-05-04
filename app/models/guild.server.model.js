@@ -32,7 +32,7 @@ var GuildSchema = new Schema({
         type: Number,
         default: 0
     },
-    guildRealm: {
+    realm: {
         type: String,
         default: null
     },
