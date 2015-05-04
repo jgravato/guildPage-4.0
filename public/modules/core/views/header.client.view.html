@@ -59,17 +59,18 @@
                     <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
                 <b class="glyphicon glyphicon-exclamation-sign"></b></button>
 			     <ul class="dropdown-menu" >
+				
+                     <li class="drop">
+                         <div ng-show="myCharValue" class="ng-hide"> <a href="/#!/characters">New Character Added! </a></div>
+			        </li>   
 			        <li class="drop">
-        	<div ng-show="myCharValue" class="ng-hide"> New Character Added! </div>
+                        <div ng-show="myGuildValue" class="ng-hide"> <a href="/#!/characters">New Guild Added! </a></div>
 			        </li>
 			        <li class="drop">
-        	<div ng-show="myGuildValue" class="ng-hide"> New Guild Added! </div>
+                        <div ng-show="characterDeletedValue" class="ng-hide"> <a href="/#!/guilds">Character Deleted!</a> </div>
 			        </li>
 			        <li class="drop">
-        	<div ng-show="characterDeletedValue" class="ng-hide"> Character Deleted! </div>
-			        </li>
-			        <li class="drop">
-        	<div ng-show="guildDeletedValue" class="ng-hide"> Guild Deleted! </div>
+                        <div ng-show="guildDeletedValue" class="ng-hide"> <a href="/#!/guilds">Guild Deleted! </a></div>
 			        </li>
 			    </ul>
 			</li>
