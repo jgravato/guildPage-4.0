@@ -54,21 +54,21 @@
 				</ul>
 			</li>
 <!--	notifications tab		-->
-			<li class="dropdown">
-               	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <b class="caret"></b>
-                </a>
-			     <ul class="dropdown-menu">
-			        <li>
+            
+			<li class="dropdown" id="notification" ng-if="myNoteValue" class="ng-hide">
+                    <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                <b class="glyphicon glyphicon-exclamation-sign"></b></button>
+			     <ul class="dropdown-menu" >
+			        <li class="drop">
         	<div ng-show="myCharValue" class="ng-hide"> New Character Added! </div>
 			        </li>
-                      <li>
+			        <li class="drop">
         	<div ng-show="myGuildValue" class="ng-hide"> New Guild Added! </div>
 			        </li>
-                    <li>
+			        <li class="drop">
         	<div ng-show="characterDeletedValue" class="ng-hide"> Character Deleted! </div>
 			        </li>
-                    <li>
+			        <li class="drop">
         	<div ng-show="guildDeletedValue" class="ng-hide"> Guild Deleted! </div>
 			        </li>
 			    </ul>

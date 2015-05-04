@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 body{
     background-image:url("http://i.imgur.com/DIo2984.png");
 }
+=======
+/*body{
+    background-image:url("http://i.imgur.com/DIo2984.png");
+}*/
+>>>>>>> Stashed changes
 .content {
 	margin-top: 50px;
 }
@@ -68,4 +74,15 @@ body{
     margin-bottom: 20px;
     background-color: gold;
     border-radius: 25px;
+<<<<<<< Updated upstream
+=======
+}
+
+#notification{
+    padding-top: 10px;
+}
+
+.drop{
+    margin-left: 30px;
+>>>>>>> Stashed changes
 }

@@ -15,20 +15,28 @@ angular.module('core').controller('HeaderController', ['$scope', '$rootScope', '
             $scope.isCollapsed = false;
         });
         Socket.on('character.created', function (character) {
+            $rootScope.myNoteValue = true; 
             $rootScope.myCharValue = true;
 //            console.log($rootScope);
         });
        Socket.on('guild.created', function (guild) {
-            $rootScope.myGuildValue = true;
+           $rootScope.myNoteValue = true; 
+           $rootScope.myGuildValue = true;
 //            console.log($rootScope);
         });
       Socket.on('character.deleted', function (character) {
+            $rootScope.myNoteValue = true;   
             $rootScope.characterDeletedValue = true;
 //            console.log($rootScope);
         });
      Socket.on('guild.deleted', function (guild) {
+            $rootScope.myNoteValue = true;    
             $rootScope.guildDeletedValue = true;
 //            console.log($rootScope);
         });
+   /*  Socket.on('guild.note', function (guild) {
+            $rootScope.guildNoteValue = true;
+//            console.log($rootScope);
+        });*/
  }
 ]);
