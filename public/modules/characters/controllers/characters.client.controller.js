@@ -96,7 +96,6 @@ angular.module('characters').controller('CharactersController', ['$http', '$scop
                         $scope.name = '';
                         $scope.realm = '';
 
-                        $scope.authentication.user.selectedCharacter.push(response);
 
                     }, function (errorResponse) {
                         $scope.error = errorResponse.data.message;
@@ -143,8 +142,11 @@ angular.module('characters').controller('CharactersController', ['$http', '$scop
         $scope.find = function () {
             if ($scope.authentication.user) {
                 $scope.characters = Characters.query();
-                $scope.guild = Guilds.query();
-                console.log($scope);
+
+                Guilds.query().$promise.then(function (res) {
+                    $scope.guilds = res;
+                    //    console.log($scope.characters.name);
+                });
             }
         };
 

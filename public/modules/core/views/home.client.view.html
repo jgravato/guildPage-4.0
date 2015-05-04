@@ -12,12 +12,12 @@
             <div class="well well-lg"> 
               <div class="row">
                 <div class="col-sm-6">
-        	      	<img src="http://placehold.it/180x100" class="img-responsive">
+        	      	 <img src="{{ characters[0].thumbnail }}">
                 </div>
                 <div class="col-sm-6">
 	              	<ul>
-                    <li>{{ character.name }} </li>
-                    <li>Race</li>
+                    <li>{{ characters[0].name }} </li>
+                    <li>{{ characters[0].race }}</li>
                     <li>Rank</li>
                     <li>Switch Character</li> 
                   </ul>
@@ -111,33 +111,17 @@
         
         <!--left-->
       <div class="col-md-3" id="rightCol">
-        <ul class="nav nav-stacked" id="sidebar">
+
          
           <form action="">
               <input style="margin: 10px; padding: 10px;" type="text" value="Search Roster" />
           </form>
           
-          <li style="display:block;">
-            <img src="http://placehold.it/75X75"/style="padding:10px;">
-            <a href="#sec0" style="float:right;">Character Name</a>
-          </li>
-          <li style="display:block;">
-            <img src="http://placehold.it/75X75"/style="padding:10px;">
-            <a href="#sec0" style="float:right;">Character Name</a>
-          </li>
-          <li style="display:block;">
-            <img src="http://placehold.it/75X75"/style="padding:10px;">
-            <a href="#sec0" style="float:right;">Character Name</a>
-          </li>
-          <li style="display:block;">
-            <img src="http://placehold.it/75X75"/style="padding:10px;">
-            <a href="#sec0" style="float:right;">Character Name</a>
-          </li>
-          <li style="display:block;">
-            <img src="http://placehold.it/75X75"/style="padding:10px;">
-            <a href="#sec0" style="float:right;">Character Name</a>
-          </li>
-        </ul>
+          <div data-ng-repeat="member in guild[0].members" class="list-group-item">
+                {{ member.character.name }}
+            </div>
+
+
       </div><!--/left-->
   	</div><!--/row-->
 </div><!--/container-->    
